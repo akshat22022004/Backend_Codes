@@ -1,0 +1,16 @@
+// Rest api designing here
+// Json rest api
+
+
+GET /users -  render html content
+GET/api/users - give json data (helps to make a hybrid server and a restful api);
+Get/users/1 - Get the user with id one
+// get this part dynamically dynamic path parameter
+:id means a dynamic variable
+Get/users/2 - Get the user with id two.
+
+Post /users = create new user
+
+patch/user/1 = edit the user with id one
+
+Delete/user/1 - Delete the user with id one
