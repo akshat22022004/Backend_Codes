@@ -4,14 +4,16 @@ import cookieParser from "cookie-parser"
 
 const app = express()
 
+
+// cors are basically used to decide who can talk to your server
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
     credentials: true
 }))
 
-app.use(express.json({limit: "16kb"}))
-app.use(express.urlencoded({extended: true, limit: "16kb"}))
-app.use(express.static("public"))
+app.use(express.json({limit: "16kb"})) // means that the data can be parsed upto 16kb here
+app.use(express.urlencoded({extended: true, limit: "16kb"})) // in url encoded form data comes extended means all the new features are present
+app.use(express.static("public"))// allow static folders or  files to  be used in your server app
 app.use(cookieParser())
 
 
